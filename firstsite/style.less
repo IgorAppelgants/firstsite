@@ -1,0 +1,292 @@
+// Main settings
+html {
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+body {
+    height: 100vh;
+    width: 100%;
+}
+.h2() {
+    color: @h2_text;
+    font-size: 5.4rem;
+    font-weight: 70rem;
+}
+.p() {
+    margin-top: 2.4rem;
+    font-size: 1.8rem;
+    color: @text-color_grey; 
+}
+// Buttons settings
+.btn_orange {
+    padding: 1.5rem 6rem;
+    background-color: @orange;
+    border: none;
+    color: #fff;
+    font-size: 1.8rem;
+    &:focus {
+        outline: none;
+    }
+    &:active {
+        background-color: darken(@orange, 5%);
+    }
+}
+.btn_call {
+    padding: 1rem 3.5rem;
+    background-color: transparent;
+    border: 1px solid #f82370;
+    color: #f53f4f;
+    font-size: 1.6rem;
+    &:focus {
+        outline: none;
+    }
+}
+
+// Color settings
+@main-bg: #fbfbfb;
+@orange: #ff4e2e;
+@text-color_dark: #1f1f24;
+@text-color_grey: #8993ad;
+@h2_text: #262626;
+
+// Main section
+
+.main {
+    background-color: @main-bg;
+    &-heder {
+        &-menu {
+            padding: 3rem 0;
+            a {
+                margin: 0 1rem;
+                color: @text-color_dark;
+                font-size: 1.6rem;
+                &:hover {
+                    text-decoration: none;
+                    color: @text-color_dark;
+                }
+                &:focus {
+                    color: #fc557c;
+                    border-bottom: 1px solid #ff4e2e;;
+                }
+            }
+        }
+        &-contacts {
+            padding: 2rem 0;
+         a {
+            margin-right: 2rem;
+            color: @text-color_dark;
+            font-size: 2.5rem;
+            font-weight: 700;
+            &:hover {
+                text-decoration: none;
+                color: @text-color_dark;
+            }
+
+         }
+        }
+    }
+    &-content {
+        &-text {
+            margin-top: 20rem;
+            margin-bottom: 4.6rem;
+            h1 {
+                font-size: 7rem;
+                font-weight: 700;
+            }
+            p {
+                font-size: 2.5rem;
+                color: @text-color_grey;
+            }
+        }
+    }
+}
+
+// Work sections
+
+.work {
+    padding: 20rem 0;
+    &-header {
+        h2 {
+            .h2 ();
+        }
+    }
+    &-content {
+        margin: 9rem 0;
+        &-block {
+            p {
+                .p();          
+            }
+        }
+    }
+}
+
+// Portfolio sections
+
+.portfolio {
+    padding: 3rem 0;
+    &-header {
+        h2 {
+            .h2();
+        }
+    }
+    &-content {
+        margin: 9rem 0;
+        &-block {
+            p {
+                .p(); 
+            }
+        }
+    }
+}
+
+// Adaptiv sections
+
+.adaptiv {
+    margin-top: 30rem;
+    padding: 8rem 0;
+    background-color: @orange;
+    &-header {
+        padding-left: 8rem;
+        h3 {
+            color: #ffffff;
+            font-size: 4.5rem;
+            font-weight: 700;
+        }
+        p {
+            color: #ffffff;
+            font-size: 1.8rem;
+        }
+    }
+}
+
+// Contacts section
+
+.contacts {
+     &-menu {
+         padding: 8rem 0;
+         a {
+            display: block;
+             font-size: 1.6rem;
+             color: @text-color_grey;
+             &:nth-child(2) {
+                 margin-top: 1.5rem;
+             }
+             &:nth-child(3) {
+                margin-top: 1.5rem;
+            }
+            &:hover {
+                text-decoration: none;
+                color: #f82370;
+            }
+         }
+     }
+     &_link {
+        padding: 8rem 0;
+         a {
+            display: block;
+             color: @text-color_dark;
+             text-decoration: none;
+             &:nth-child(2) {
+                 margin-top: 3rem;
+             }
+             font-size: 2rem;
+             &:hover {
+                color: @text-color_dark;
+                text-decoration: none;
+             }
+         }
+     }
+     .button {
+        display: block;
+     }
+     &_button {
+        padding: 8rem 0;
+        .social_link {
+            i {
+                margin-top: 2rem;
+               margin-right: 2rem;
+               font-size: 2.2rem;
+               color: @text-color_grey;
+           }
+        }
+
+     }
+
+}
+
+//Footer cetings
+
+footer {
+    padding: 3.5rem;
+    background-color: #31293c;
+    font-size: 1.6rem;
+    color: #fff;
+}
+
+
+@media (max-width: 991px) {
+    .main {
+        &-header {
+            &-menu {
+                text-align: center;
+            }
+            &-contacts {
+                text-align: center;
+                a {
+                    display: block;
+                    margin-bottom: 5rem;
+                }
+            }
+        }
+        &-content {
+            img {
+                margin: 4rem 5rem;
+                border: 3px solid #000000;
+            }
+            button {
+                margin: 0 20rem;
+            }
+            &-text {
+                text-align: center;
+            }
+        }
+    }
+    .work {
+        &-content {
+            &-block {
+                border: 3px solid #f82370;
+                padding: 2.5rem;
+                margin-top: 2.5rem;
+                height: 24rem;
+            }
+        }
+    }
+    .portfolio {
+        &-content {
+            &-block {
+                margin-top: 3rem;
+                border: 3px solid @orange;
+            }
+        }
+    }
+    .contacts {
+        &-menu {
+            text-align: center;
+            a {
+                display: inline-block;
+                margin: 0 3rem;
+            }
+        }
+        &_link {
+            margin: 3rem 0;
+            text-align: center;
+        }
+        .button {
+            button {
+                margin: auto;
+            }
+            text-align: center;
+        }
+    }
+}
+
